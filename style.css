@@ -1,0 +1,271 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #171414;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1db954;
+    padding: 10px 0;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #fff;
+}
+
+header nav {
+    margin-top: 0;
+    background-color: #16111173;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header nav ul li {
+    margin: 0 65px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #1db954;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.grid div {
+    position: relative;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.grid div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #282828;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.grid div:hover::before {
+    opacity: 1;
+}
+
+.grid div img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.popular-artists .grid div img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.grid div p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.popular-artists .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5px;
+}
+
+footer {
+    background-color: #121212;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-content {
+    margin-bottom: 10px;
+}
+
+footer .footer-links a {
+    color: #1db954;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 0.9rem;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+header nav ul li a:hover,
+footer .footer-links a:hover,
+h2:hover,
+.grid div:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.see-all .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.see-all .grid div {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.see-all .grid div:hover {
+    transform: scale(1.05);
+}
+
+.see-all .grid div img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.see-all .grid div p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.see-all-link {
+    font-size: 0.9rem;
+    color: #1db954;
+    text-decoration: none;
+    float: right;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.see-all-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.featured-charts .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.featured-charts .grid div img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.featured-charts .grid div p {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.featured-charts a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.trending-songs a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.popular-artists a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.popular-albums a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.popular-radio a {
+    text-decoration: none;
+    color: inherit;
+}
